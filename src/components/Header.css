@@ -1,0 +1,39 @@
+/* src/Header.css */
+.header {
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+  background: linear-gradient(90deg, rgba(0, 180, 255, 0.9), rgba(0, 0, 0, 0.9)); /* Gradiente de fundo */
+  padding: 20px; /* Padding do cabeçalho */
+  z-index: 1000; /* Garante que o cabeçalho fique acima dos outros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.logo-img {
+  width: 48px; /* Ajuste do tamanho da logo */
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style-type: none;
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+.nav-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-menu a:hover {
+  color: #00b4ff; /* Cor de destaque ao passar o mouse */
+}

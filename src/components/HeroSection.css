@@ -1,0 +1,107 @@
+/* src/components/HeroSection.css */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+    background-image: url('../assets/image/hero/praia.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que tudo fique centralizado */
+  }
+  /* Miniatura do vídeo */
+  .video-thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Tamanho da miniatura */
+    cursor: pointer;
+    margin-bottom: 20px; /* Espaço entre o vídeo e o botão */
+  }
+  
+  .video-thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .modal-content iframe {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .close-modal:hover {
+    background-color: #d32f2f;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
