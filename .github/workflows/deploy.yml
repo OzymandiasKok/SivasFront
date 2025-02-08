@@ -1,0 +1,29 @@
+name: Deploy via FTP
+
+on:
+  push:
+    branches:
+      - master  # Ou a branch que você usa para deploy (ex: 'master' ou 'production')
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Instalar dependências e build do projeto
+        run: |
+          npm install  # Instala as dependências
+          npm run build  # Gera os arquivos de produção (pasta build/)
+
+      - name: Deploy via FTP para Locaweb
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}        # Host do seu servidor (ftp ou sftp)
+          user: ${{ secrets.USER }}        # Usuário FTP
+          password: ${{ secrets.PASS }}    # Senha do FTP
+          localDir: "build"                # Diretório local com os arquivos compilados (gerados por npm run build)
+          remoteDir: "/public_html"        # Diretório remoto no servidor onde você deseja enviar os arquivos
