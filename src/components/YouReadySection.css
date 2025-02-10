@@ -1,0 +1,86 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.YouReadySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section {
+  background-color: #007bff;
+  color: white;
+  padding: 80px 20px; /* Reduzi um pouco o padding para não ficar tão grande */
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Garante que o texto fique acima da imagem */
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #fff;
+  color: #007bff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Imagem como background à direita */
+.section::after {
+  content: "";
+  background: url("https://life.lp.elementor.design-lt.com/wp-content/uploads/2021/07/85284e53-object-8.svg") no-repeat right center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%; /* Ajuste o tamanho da imagem */
+  opacity: 0.3; /* Deixa mais sutil */
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .content h2 {
+      font-size: 1.5rem;
+  }
+
+  .button {
+      font-size: 0.9rem;
+  }
+
+  .section::after {
+      width: 60%; /* Ajusta a imagem para telas menores */
+      opacity: 0.2;
+  }
+}

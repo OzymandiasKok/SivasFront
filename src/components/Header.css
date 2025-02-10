@@ -1,10 +1,10 @@
 /* src/Header.css */
-.header {
+.header-section {
   position: fixed; /* Fixa o cabeçalho no topo */
   top: 0;
   left: 0;
   width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
-  background: linear-gradient(90deg, rgba(0, 180, 255, 0.9), rgba(0, 0, 0, 0.9)); /* Gradiente de fundo */
+  background: linear-gradient(90deg, rgba(214, 223, 226, 0.9), rgba(231, 224, 224, 0.9)); /* Gradiente de fundo */
   padding: 20px; /* Padding do cabeçalho */
   z-index: 1000; /* Garante que o cabeçalho fique acima dos outros elementos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
@@ -37,3 +37,39 @@
 .nav-menu a:hover {
   color: #00b4ff; /* Cor de destaque ao passar o mouse */
 }
+
+/* Menu responsivo */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none; /* Menu oculto por padrão em telas pequenas */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu.open {
+    display: block; /* Menu visível quando a classe "open" é adicionada */
+  }
+
+  .nav-menu a {
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+

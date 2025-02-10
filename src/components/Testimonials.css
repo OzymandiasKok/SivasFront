@@ -1,0 +1,135 @@
+.testimonials-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Title and Subtitle */
+  .testimonials-header {
+    margin-bottom: 50px;
+  }
+  
+  .testimonials-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  
+  .testimonials-subtitle {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  
+  /* Imagem de bolinha no topo esquerdo */
+  .decorative-circle {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    width: 100px;
+    height: auto;
+    opacity: 0.6;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonial-box {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Quotes Marks no fundo */
+  .quote-background {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.1);
+    font-family: serif;
+    font-weight: bold;
+    z-index: 0;
+  }
+  
+  .testimonial-quote {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #333;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .testimonial-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .testimonial-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .testimonial-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  
+  .testimonial-job {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Animações */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .testimonials-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .quote-background {
+      font-size: 80px;
+    }
+  
+    .decorative-circle {
+      width: 80px;
+    }
+  }
+  

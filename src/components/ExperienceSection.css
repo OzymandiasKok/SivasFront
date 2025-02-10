@@ -1,0 +1,72 @@
+/* src/components/ExperienceSection.css */
+
+.experience-section {
+    background-color: #007BFF; /* Azul */
+    padding: 50px 0; /* Espaçamento acima e abaixo */
+    color: white;
+  }
+  
+  .experience-container {
+    display: flex;
+    justify-content: space-between; /* Garante que a imagem e o texto/progress fiquem nas extremidades */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    flex: 1; /* A imagem ocupará 50% da largura */
+    padding-right: 20px; /* Adiciona um pouco de espaçamento à direita da imagem */
+  }
+  
+  .experience-image {
+    width: 100%;
+    height: auto; /* Garante que a imagem seja responsiva */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  .text-container {
+    flex: 1; /* O texto e progress ocuparão 50% da largura */
+    padding-left: 20px; /* Adiciona um pouco de espaçamento à esquerda do texto */
+  }
+  
+  .experience-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .experience-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .progress-container {
+    width: 100%;
+  }
+  
+  .progress-bar {
+    margin-bottom: 20px;
+  }
+  
+  .progress-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .progress-line {
+    width: 0;
+    height: 8px;
+    background-color: #28a745; /* Cor verde para o progresso */
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  .progress-count {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+  }
+  

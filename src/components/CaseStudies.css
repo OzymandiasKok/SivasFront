@@ -1,0 +1,141 @@
+.case-studies-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+  }
+  
+  /* Imagem decorativa (SVG no topo, centralizada) */
+  .decorative-shape {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .case-studies-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .case-studies-text {
+    flex: 1;
+    max-width: 500px;
+    color: #1e3a8a;
+    animation: fadeInLeft 1s ease-out;
+  }
+  
+  .case-studies-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .case-studies-description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .case-studies-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .case-studies-button:hover {
+    background-color: #e68900;
+  }
+  
+  .case-studies-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInRight 1s ease-out;
+  }
+  
+  .case-main-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Caixa branca para o texto dentro da imagem */
+  .case-caption-box {
+    position: absolute;
+    bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  .case-caption {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  
+  /* Animações */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .case-studies-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .case-studies-text {
+      max-width: 100%;
+    }
+  
+    .case-main-image {
+      max-width: 90%;
+    }
+  
+    .case-caption-box {
+      bottom: 10px;
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+  

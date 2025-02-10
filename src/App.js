@@ -1,11 +1,19 @@
-// src/App.js
-//import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';  // Importando o Header
 import HeroSection from './components/HeroSection';  // Importando o HeroSection
-import AboutSection from './components/AboutSection';  // Importando o HeroSection
-import ServicesSection from './components/ServicesSection';
-import InfoSection from './components/InfoSection';
+import AboutSection from './components/AboutSection';  // Importando o AboutSection
+import ServicesSection from './components/ServicesSection';  // Importando o ServicesSection
+import InfoSection from './components/InfoSection';  // Importando o InfoSection
+import ExperienceSection from './components/ExperienceSection';  // Importando a nova ExperienceSection
+import Pricing from './components/Pricing';
+import TeamSection from './components/TeamSection';
+import CaseStudies from './components/CaseStudies';
+import Testimonials from './components/Testimonials';
+import YouReadySection from './components/YouReadySection';
+import FAQ from './components/FAQ';
+import ContactSection from './components/ContactSection';
+
+
 function App() {
   return (
     <div className="App">
@@ -15,15 +23,37 @@ function App() {
       {/* Seção Hero */}
       <HeroSection />
 
-      {/* Seção about */}
+      {/* Seção About */}
       <AboutSection />
 
-      {/* Seção serviços */}
+      {/* Seção de Serviços */}
       <ServicesSection />
 
-      <div>
+      {/* Seção de Info */}
       <InfoSection />
-      </div>
+
+      {/* Nova Seção */}
+      <ExperienceSection />
+
+      {/* Nova Seção */}
+      <Pricing/>
+
+      <TeamSection/>
+
+      <CaseStudies/>
+
+      <Testimonials/>
+
+      <YouReadySection/>
+
+      <FAQ/>
+
+      <ContactSection/>
+
+
+     
+
+      
 
       {/* Conteúdo da página */}
       <div className="content">
@@ -31,7 +61,6 @@ function App() {
       </div>
 
       {/* Outras seções podem ser adicionadas aqui */}
-      {/* Exemplo: <FeaturesSection /> ou <AboutSection /> */}
     </div>
   );
 }
