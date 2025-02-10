@@ -1,5 +1,5 @@
 // src/App.js
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';  // Importando o Header
 import HeroSection from './components/HeroSection';  // Importando o HeroSection
