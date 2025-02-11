@@ -1,72 +1,118 @@
-/* src/components/ExperienceSection.css */
-
 .experience-section {
-    background-color: #007BFF; /* Azul */
-    padding: 50px 0; /* Espaçamento acima e abaixo */
-    color: white;
-  }
-  
-  .experience-container {
-    display: flex;
-    justify-content: space-between; /* Garante que a imagem e o texto/progress fiquem nas extremidades */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  background: blue;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.text-container {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+  order: 2;
+  margin-left: 50px; /* Ajuste o valor para mover o texto mais para a direita */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  order: 1;
+  margin-left: -50px; /* Ajuste o valor para mover a imagem mais para a esquerda */
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 40%;
+  background: white;
+  z-index: -1;
+}
+
+.experience-image {
+  width: 100%;  /* Faz a imagem ocupar toda a largura da sua coluna */
+  max-width: 1000px;  /* Ajusta o tamanho máximo da imagem */
+  height: auto;  /* Garante que a imagem tenha a altura proporcional à largura */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -350px;  /* Ajuste para garantir o espaçamento adequado */
+}
+
+/* Títulos e textos */
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f0a500;
+}
+
+.experience-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #ffdd57;
+}
+
+.experience-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Lista estilizada */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.experience-list li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.experience-list li strong {
+  color: #ffdd57;
+  margin-right: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .image-container {
-    flex: 1; /* A imagem ocupará 50% da largura */
-    padding-right: 20px; /* Adiciona um pouco de espaçamento à direita da imagem */
+    justify-content: left;  /* Alinha a imagem ao centro em telas pequenas */
   }
-  
+
   .experience-image {
-    width: 100%;
-    height: auto; /* Garante que a imagem seja responsiva */
-    border-radius: 8px; /* Bordas arredondadas */
+    max-width: 200%;  /* Garante que a imagem ocupe toda a largura da tela em dispositivos pequenos */
   }
-  
+
   .text-container {
-    flex: 1; /* O texto e progress ocuparão 50% da largura */
-    padding-left: 20px; /* Adiciona um pouco de espaçamento à esquerda do texto */
+    margin-left: 0; /* Remove o margem quando a tela for pequena */
+    text-align: center; /* Ajuste a posição do texto para centralizado em dispositivos pequenos */
   }
-  
-  .experience-title {
-    font-size: 32px;
-    margin-bottom: 20px;
+
+  .image-container {
+    margin-left: 0; /* Remove o margem quando a tela for pequena */
   }
-  
-  .experience-description {
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-  
-  .progress-container {
-    width: 100%;
-  }
-  
-  .progress-bar {
-    margin-bottom: 20px;
-  }
-  
-  .progress-title {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  
-  .progress-line {
-    width: 0;
-    height: 8px;
-    background-color: #28a745; /* Cor verde para o progresso */
-    position: relative;
-    border-radius: 5px;
-  }
-  
-  .progress-count {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    color: white;
-    font-weight: bold;
-  }
-  
+}

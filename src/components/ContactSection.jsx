@@ -1,44 +1,47 @@
 import React from 'react';
-import './ContactSection.css'; // Certifique-se de que este arquivo CSS seja importado
+import './ContactSection.css';
 
 const ContactSection = () => {
   return (
     <section className="contact-section" id="contact">
-      <div className="container">
-        <div className="text-column">
-          <h2 className="heading">Contact Us</h2>
+      <div className="elementor-container">
+        {/* Coluna Esquerda - Texto */}
+        <div className="elementor-column elementor-col-33 text-column">
+          <h2 className="elementor-heading-title">Fale Conosco</h2>
           <p className="contact-info">
-            devscread@info.com<br />
-            +613 4827 2294
+          contato@sivassecuritizadora.com.br<br />
+             +55 31 9975-1404
           </p>
           <p className="info-text">
-            Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
+            Ligue para nós ou nos visite a qualquer momento, nós nos esforçamos para responder a todas as consultas em até 24 horas úteis.
           </p>
         </div>
-        <div className="form-column">
+
+        {/* Coluna Direita - Formulário */}
+        <div className="elementor-column elementor-col-66 form-column">
           <form className="contact-form">
             <fieldset>
               <div className="name-container">
                 <div className="name-field">
-                  <label htmlFor="first-name" className="input-label">First Name</label>
-                  <input type="text" id="first-name" className="input-field" placeholder="First Name" />
+                  <label htmlFor="first-name">Primeiro Nome</label>
+                  <input type="text" id="first-name" placeholder="Primeiro Nome" />
                 </div>
                 <div className="name-field">
-                  <label htmlFor="last-name" className="input-label">Last Name</label>
-                  <input type="text" id="last-name" className="input-field" placeholder="Last Name" />
+                  <label htmlFor="last-name">Último Nome</label>
+                  <input type="text" id="last-name" placeholder="Último Nome" />
                 </div>
               </div>
 
-              <label htmlFor="email" className="input-label">Email</label>
-              <input type="email" id="email" className="input-field" placeholder="Email Address" required />
+              <label htmlFor="email">E-mail</label>
+              <input type="email" id="email" placeholder="Endereço de E-mail" required />
 
-              <label htmlFor="subject" className="input-label">Subject</label>
-              <input type="text" id="subject" className="input-field" placeholder="Subject" />
+              <label htmlFor="subject">Assunto</label>
+              <input type="text" id="subject" placeholder="Assunto" />
 
-              <label htmlFor="message" className="input-label">Your Message</label>
-              <textarea id="message" className="input-field" placeholder="Your Message" rows="4"></textarea>
+              <label htmlFor="message">Sua Mensagem</label>
+              <textarea id="message" placeholder="Sua Mensagem" rows="4"></textarea>
 
-              <button type="submit" className="submit-button">Submit Form</button>
+              <button type="submit" className="submit-button">Enviar Formulário</button>
             </fieldset>
           </form>
         </div>
