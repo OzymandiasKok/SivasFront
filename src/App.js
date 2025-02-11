@@ -1,5 +1,5 @@
 import './App.css';
-//import Header from './components/Header';  // Importando o Header
+import Header from './components/Header';  // Importando o Header
 //import HeroSection from './components/HeroSection';  // Importando o HeroSection
 //import AboutSection from './components/AboutSection';  // Importando o AboutSection
 //import ServicesSection from './components/ServicesSection';  // Importando o ServicesSection
@@ -17,9 +17,9 @@ import ContactSection from './components/ContactSection';
 function App() {
   return (
     <div className="App">
-      {/* Cabeçalho da página 
       <Header />
 
+      {/*  
       Seção Hero 
       <HeroSection />
 

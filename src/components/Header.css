@@ -1,51 +1,62 @@
 /* src/Header.css */
 .header-section {
-  position: fixed; /* Fixa o cabeçalho no topo */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
-  background: linear-gradient(90deg, rgba(214, 223, 226, 0.9), rgba(231, 224, 224, 0.9)); /* Gradiente de fundo */
-  padding: 20px; /* Padding do cabeçalho */
-  z-index: 1000; /* Garante que o cabeçalho fique acima dos outros elementos */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+  width: 100%;
+  background: linear-gradient(90deg, rgba(2, 3, 1, 0.9), rgba(2, 0, 0, 0.9));
+  padding: 0px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo à esquerda, menu à direita */
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto; /* Centraliza o conteúdo */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo-img {
-  width: 48px; /* Ajuste do tamanho da logo */
+  width: 200px; /* Ajuste conforme necessário */
+  height: 80px; /* Define uma altura fixa */
+  object-fit: cover; /* Corta as partes extras e mantém o centro */
+  object-position: center; /* Centraliza a parte visível */
+  border-radius: 8px; /* Opcional: arredondar os cantos */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu ul {
   display: flex;
   list-style-type: none;
-  gap: 15px; /* Espaçamento entre os itens */
+  gap: 15px;
 }
 
 .nav-menu a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
 }
 
 .nav-menu a:hover {
-  color: #00b4ff; /* Cor de destaque ao passar o mouse */
+  color: #00b4ff;
 }
 
 /* Menu responsivo */
 .menu-toggle {
   display: none;
   cursor: pointer;
-}
-
-.nav-menu {
-  display: flex;
 }
 
 /* Responsividade */
@@ -55,14 +66,14 @@
   }
 
   .nav-menu {
-    display: none; /* Menu oculto por padrão em telas pequenas */
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
   }
 
   .nav-menu.open {
-    display: block; /* Menu visível quando a classe "open" é adicionada */
+    display: block;
   }
 
   .nav-menu a {
@@ -72,4 +83,3 @@
     box-sizing: border-box;
   }
 }
-
