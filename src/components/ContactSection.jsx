@@ -3,14 +3,14 @@ import './ContactSection.css';
 
 const ContactSection = () => {
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section" id="contactus"> {/* Alterei o id para 'contactus' */}
       <div className="elementor-container">
         {/* Coluna Esquerda - Texto */}
         <div className="elementor-column elementor-col-33 text-column">
           <h2 className="elementor-heading-title">Fale Conosco</h2>
           <p className="contact-info">
-          contato@sivassecuritizadora.com.br<br />
-             +55 31 9975-1404
+            contato@sivassecuritizadora.com.br<br />
+            +55 31 9975-1404
           </p>
           <p className="info-text">
             Ligue para nós ou nos visite a qualquer momento, nós nos esforçamos para responder a todas as consultas em até 24 horas úteis.
