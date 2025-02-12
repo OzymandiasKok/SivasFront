@@ -1,10 +1,10 @@
 /* Seção de Experiência */
 .experience-section {
-  background: blue;
+  background: rgb(1, 29, 61);
   color: #fff;
   padding: 40px 10px; /* Reduzir o padding para telas menores */
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Alterado para Montserrat */
   position: relative;
   overflow-x: hidden; /* Garantir que não haja rolagem horizontal */
   width: 100%; /* Garantir que ocupe toda a largura */
@@ -75,14 +75,14 @@
   font-size: 2rem; /* Reduzir o tamanho do título */
   font-weight: 700;
   margin-bottom: 20px;
-  color: #f0a500;
+  color: #ffffff;
 }
 
 .experience-subtitle {
   font-size: 1.5rem; /* Reduzir o tamanho do subtítulo */
   font-weight: 600;
   margin-top: 20px; /* Reduzir a margem superior */
-  color: #ffdd57;
+  color: #ffffff;
 }
 
 .experience-description {
@@ -108,7 +108,7 @@
 }
 
 .experience-list li strong {
-  color: #ffdd57;
+  color: #ffffff;
   margin-right: 8px;
 }
 

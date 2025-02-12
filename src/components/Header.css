@@ -1,3 +1,4 @@
+/* Definição do Header */
 .header-section {
   position: fixed;
   top: 0;
@@ -7,6 +8,7 @@
   padding: 0;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease-in-out; /* Transição suave */
 }
 
 .header-container {
@@ -18,18 +20,20 @@
   padding: 0 20px;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  flex-grow: 1; /* Logo ocupa o espaço restante */
+  flex-grow: 1;
 }
 
 .logo-img {
-  width: 150px; /* Ajuste para ser mais responsivo em telas menores */
-  height: 60px; /* Ajuste para ser mais responsivo em telas menores */
+  width: 150px;
+  height: 60px;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
+  transition: width 0.3s ease, height 0.3s ease; /* Transição suave */
 }
 
 /* Estilos do menu */
@@ -41,13 +45,14 @@
 .nav-menu ul {
   display: flex;
   list-style-type: none;
-  gap: 20px;
+  gap: 30px; /* Aumenta o espaçamento */
 }
 
 .nav-menu a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
+  transition: color 0.3s ease; /* Transição suave para hover */
 }
 
 .nav-menu a:hover {
@@ -61,7 +66,7 @@
 }
 
 .menu-toggle i {
-  font-size: 24px;
+  font-size: 28px; /* Aumenta o tamanho do ícone */
   color: white;
 }
 
@@ -72,18 +77,19 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 20px;
   }
 
   .logo-img {
-    width: 120px; /* Ajuste o tamanho do logo para telas menores */
+    width: 120px;
     height: auto;
   }
 
   .menu-toggle {
     display: block;
     position: absolute;
-    right: 20px; /* Coloca o botão na direita */
-    top: 20px; /* Ajuste para ficar bem posicionado */
+    right: 20px;
+    top: 20px;
   }
 
   .nav-menu {
@@ -97,6 +103,7 @@
     top: 60px;
     left: 0;
     z-index: 1001;
+    transition: all 0.3s ease-in-out; /* Transição suave */
   }
 
   .nav-menu.open {
@@ -108,9 +115,22 @@
     font-size: 18px;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
   }
 
   .nav-menu a:hover {
     background-color: #00b4ff;
+  }
+}
+
+/* Media Query para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  .logo-img {
+    width: 100px; /* Ajusta o logo para telas muito pequenas */
+    height: auto;
+  }
+
+  .menu-toggle i {
+    font-size: 30px; /* Aumenta o ícone em telas pequenas */
   }
 }
