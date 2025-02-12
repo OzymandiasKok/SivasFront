@@ -23,6 +23,7 @@ const Header = () => {
             <ul>
               <li><a href="/">Início</a></li>
               <li><a href="#contactus">Contato</a></li>
+              <li><a href="#login" className="login-button">Entre</a></li> {/* Botão de Login */}
             </ul>
           </nav>
         </div>

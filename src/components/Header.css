@@ -121,6 +121,12 @@
   .nav-menu a:hover {
     background-color: #00b4ff;
   }
+
+  /* Ajuste no botão de login em telas pequenas */
+  .login-button {
+    margin-left: 10px;  /* Ajusta o espaço do botão para a esquerda */
+    margin-right: 0;  /* Remover o margin-right se necessário */
+  }
 }
 
 /* Media Query para telas muito pequenas (celulares) */
@@ -133,4 +139,46 @@
   .menu-toggle i {
     font-size: 30px; /* Aumenta o ícone em telas pequenas */
   }
+
+  /* Ajuste no botão de login em telas muito pequenas */
+  .login-button {
+    margin-left: 0;  /* Reduz a margem da esquerda */
+    padding: 8px 15px;  /* Ajusta o padding do botão */
+    font-size: 14px;  /* Ajusta o tamanho da fonte */
+  }
+}
+
+/* Botão de Login */
+.login-button {
+  background-color: #534646;  /* Cor de fundo clara */
+  color: #663333;  /* Cor do texto */
+  text-decoration: none;  /* Remover underline */
+  padding: 8px 20px;  /* Padding confortável */
+  font-size: 16px;  /* Tamanho da fonte */
+  font-weight: bold;  /* Texto em negrito */
+  border-radius: 30px;  /* Bordas arredondadas */
+  cursor: pointer;  /* Indica que o item é clicável */
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;  /* Transições suaves */
+  text-transform: uppercase;  /* Deixar o texto em maiúsculas */
+  display: inline-block;  /* Garantir que o link se comporte como botão */
+}
+
+.login-button:hover {
+  background-color: #ffffff;  /* Mudar a cor do fundo ao passar o mouse */
+  transform: scale(1.05);  /* Aumentar levemente o tamanho do botão */
+  color: #130e0e;  /* Garantir que a cor do texto permaneça branca */
+}
+
+.login-button:focus {
+  outline: none;  /* Remover o contorno de foco */
+}
+
+/* Garantir que o link de login tenha o espaçamento correto entre os outros links */
+.nav-menu .login-button {
+  margin-left: 20px;  /* Distância entre o botão de login e os outros links */
+  border: 2px solid transparent;  /* Garantir que não haja borda quando não estiver em foco */
+}
+
+.nav-menu .login-button:hover {
+  background-color: #ffffff;  /* Alterar para um tom mais escuro ao passar o mouse */
 }
