@@ -175,8 +175,9 @@
 
 /* Garantir que o link de login tenha o espaçamento correto entre os outros links */
 .nav-menu .login-button {
-  margin-left: 20px;  /* Distância entre o botão de login e os outros links */
+    /* Distância entre o botão de login e os outros links */
   border: 2px solid transparent;  /* Garantir que não haja borda quando não estiver em foco */
+  margin-right: 10px;
 }
 
 .nav-menu .login-button:hover {
