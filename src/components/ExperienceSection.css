@@ -1,37 +1,50 @@
+/* Seção de Experiência */
 .experience-section {
   background: blue;
   color: #fff;
-  padding: 80px 20px;
+  padding: 40px 10px; /* Reduzir o padding para telas menores */
   text-align: center;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  overflow-x: hidden; /* Garantir que não haja rolagem horizontal */
+  width: 100%; /* Garantir que ocupe toda a largura */
+  box-sizing: border-box; /* Incluir padding e borda nas dimensões */
 }
 
+/* Container principal */
 .experience-container {
-  max-width: 1200px;
+  max-width: 100%; /* Garantir que o container não ultrapasse a largura da tela */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centralizar os elementos */
   position: relative;
+  width: 100%; /* Garantir que ocupe 100% da largura */
+  box-sizing: border-box; /* Incluir padding e borda nas dimensões */
 }
 
+/* Contêiner de texto */
 .text-container {
   flex: 1;
   padding: 10px;
   text-align: left;
   order: 2;
-  margin-left: 50px; /* Ajuste o valor para mover o texto mais para a direita */
+  margin-left: 0; /* Remover margem à esquerda */
+  width: 100%; /* Garantir que ocupe 100% da largura */
+  box-sizing: border-box;
 }
 
+/* Contêiner de imagem */
 .image-container {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Centralizar a imagem */
   position: relative;
   order: 1;
-  margin-left: -50px; /* Ajuste o valor para mover a imagem mais para a esquerda */
+  margin-left: 0; /* Remover margem negativa */
+  width: 100%; /* Garantir que ocupe 100% da largura */
+  box-sizing: border-box;
 }
 
 .image-container::before {
@@ -39,39 +52,41 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 100%; /* Ajustar a largura */
   height: 40%;
   background: white;
   z-index: -1;
 }
 
+/* Imagem */
 .experience-image {
-  width: 100%;  /* Faz a imagem ocupar toda a largura da sua coluna */
-  max-width: 1000px;  /* Ajusta o tamanho máximo da imagem */
-  height: auto;  /* Garante que a imagem tenha a altura proporcional à largura */
+  width: 100%; /* Ajustar a largura da imagem */
+  max-width: 100%; /* Garantir que a imagem não ultrapasse a largura da tela */
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
-  top: -350px;  /* Ajuste para garantir o espaçamento adequado */
+  top: 0; /* Remover o posicionamento negativo */
+  box-sizing: border-box;
 }
 
 /* Títulos e textos */
 .experience-title {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduzir o tamanho do título */
   font-weight: 700;
   margin-bottom: 20px;
   color: #f0a500;
 }
 
 .experience-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Reduzir o tamanho do subtítulo */
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 20px; /* Reduzir a margem superior */
   color: #ffdd57;
 }
 
 .experience-description {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzir o tamanho da fonte */
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -80,12 +95,12 @@
 .experience-list {
   list-style: none;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzir o tamanho da fonte */
 }
 
 .experience-list li {
   background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
+  padding: 10px; /* Reduzir o padding */
   margin: 10px 0;
   border-radius: 10px;
   display: flex;
@@ -99,20 +114,55 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .image-container {
-    justify-content: left;  /* Alinha a imagem ao centro em telas pequenas */
+  .experience-container {
+    flex-direction: column;  /* Empilhar os elementos */
+    align-items: center;
   }
 
-  .experience-image {
-    max-width: 200%;  /* Garante que a imagem ocupe toda a largura da tela em dispositivos pequenos */
+  .image-container {
+    order: 1;  /* A imagem vem primeiro */
+    width: 100%; /* Garantir que ocupe 100% da largura */
   }
 
   .text-container {
-    margin-left: 0; /* Remove o margem quando a tela for pequena */
-    text-align: center; /* Ajuste a posição do texto para centralizado em dispositivos pequenos */
+    order: 2;  /* O texto vem após a imagem */
+    text-align: center; /* Centralizar o texto */
+    width: 100%; /* Garantir que ocupe 100% da largura */
   }
 
-  .image-container {
-    margin-left: 0; /* Remove o margem quando a tela for pequena */
+  .experience-title {
+    font-size: 1.8rem;  /* Ajustar o tamanho do título */
+  }
+
+  .experience-subtitle {
+    font-size: 1.3rem;  /* Ajustar o tamanho do subtítulo */
+  }
+
+  .experience-description,
+  .experience-list li {
+    font-size: 0.9rem;  /* Ajustar o tamanho da fonte */
+  }
+
+  .experience-list li {
+    padding: 8px;  /* Ajustar o padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.5rem;  /* Ajustar o tamanho do título */
+  }
+
+  .experience-subtitle {
+    font-size: 1.2rem;  /* Ajustar o tamanho do subtítulo */
+  }
+
+  .experience-description,
+  .experience-list li {
+    font-size: 0.8rem;  /* Ajustar o tamanho da fonte */
+  }
+
+  .experience-list li {
+    padding: 6px;  /* Ajustar o padding */
   }
 }

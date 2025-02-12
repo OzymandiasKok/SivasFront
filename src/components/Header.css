@@ -1,18 +1,17 @@
-/* src/Header.css */
 .header-section {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(90deg, rgba(2, 3, 1, 0.9), rgba(2, 0, 0, 0.9));
-  padding: 0px;
+  padding: 0;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between; /* Logo à esquerda, menu à direita */
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -22,16 +21,18 @@
 .logo {
   display: flex;
   align-items: center;
+  flex-grow: 1; /* Logo ocupa o espaço restante */
 }
 
 .logo-img {
-  width: 200px; /* Ajuste conforme necessário */
-  height: 80px; /* Define uma altura fixa */
-  object-fit: cover; /* Corta as partes extras e mantém o centro */
-  object-position: center; /* Centraliza a parte visível */
-  border-radius: 8px; /* Opcional: arredondar os cantos */
+  width: 150px; /* Ajuste para ser mais responsivo em telas menores */
+  height: 60px; /* Ajuste para ser mais responsivo em telas menores */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
 }
 
+/* Estilos do menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@
 .nav-menu ul {
   display: flex;
   list-style-type: none;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-menu a {
@@ -53,16 +54,36 @@
   color: #00b4ff;
 }
 
-/* Menu responsivo */
+/* Ícone de hambúrguer */
 .menu-toggle {
   display: none;
   cursor: pointer;
 }
 
+.menu-toggle i {
+  font-size: 24px;
+  color: white;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 120px; /* Ajuste o tamanho do logo para telas menores */
+    height: auto;
+  }
+
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: 20px; /* Coloca o botão na direita */
+    top: 20px; /* Ajuste para ficar bem posicionado */
   }
 
   .nav-menu {
@@ -70,6 +91,12 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1001;
   }
 
   .nav-menu.open {
@@ -77,9 +104,13 @@
   }
 
   .nav-menu a {
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .nav-menu a:hover {
+    background-color: #00b4ff;
   }
 }

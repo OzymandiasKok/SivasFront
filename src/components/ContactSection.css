@@ -8,20 +8,25 @@
   align-items: center;
   justify-content: center;
   padding: 60px 0;
+  box-sizing: border-box;
 }
 
 /* Container principal */
 .elementor-container {
   display: flex;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   gap: 40px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20px; /* Adiciona um padding para garantir que não ultrapasse as bordas */
 }
 
 /* Coluna do texto */
 .text-column {
   flex: 1;
   color: white;
+  padding: 10px;
 }
 
 .text-column h2 {
@@ -37,16 +42,21 @@
 /* Coluna do formulário */
 .form-column {
   flex: 2;
-  background: rgba(255, 255, 255, 0.2); /* Transparência para destaque */
+  background: rgba(255, 255, 255, 0.2);
   padding: 30px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+  max-width: 500px; /* Limita o tamanho máximo do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
 }
 
 /* Formulário */
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centraliza os campos de input */
 }
 
 .contact-form fieldset {
@@ -58,24 +68,28 @@
 .name-container {
   display: flex;
   gap: 10px;
-  justify-content: space-between; /* Adicione essa linha */
+  justify-content: space-between;
+  width: 100%; /* Garantir que ocupe toda a largura do formulário */
 }
 
 .name-field {
-  flex-basis: 45%; /* Adicione essa linha */
+  flex-basis: 45%;
+  margin-bottom: 15px;
 }
 
 /* Campos do formulário */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
+  max-width: 90%; /* Limita a largura dos inputs */
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   font-size: 16px;
-  background: white; /* Fundo branco */
+  background: white;
   color: black;
+  box-sizing: border-box; /* Garantir que o padding seja considerado nas dimensões */
 }
 
 /* Placeholder */
@@ -94,8 +108,71 @@
   cursor: pointer;
   border-radius: 8px;
   transition: 0.3s;
+  max-width: 90%; /* Limita a largura do botão */
 }
 
 .submit-button:hover {
   background: #005bb5;
+}
+
+/* Media Query para telas pequenas (celular) */
+@media (max-width: 768px) {
+  .elementor-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px; /* Ajustar o padding para telas pequenas */
+  }
+
+  .text-column {
+    text-align: center;
+  }
+
+  .form-column {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+    max-width: 100%; /* Garante que os inputs ocuparam toda a largura disponível */
+  }
+
+  .submit-button {
+    font-size: 16px;
+    padding: 10px;
+    max-width: 100%; /* Garante que o botão ocupe toda a largura */
+  }
+
+  .name-container {
+    flex-direction: column;
+  }
+
+  .name-field {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Media Query para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  .text-column h2 {
+    font-size: 20px;
+  }
+
+  .text-column p {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
