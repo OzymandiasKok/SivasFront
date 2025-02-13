@@ -14,12 +14,12 @@
 /* Container principal */
 .elementor-container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
   gap: 40px;
-  flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 0 20px; /* Adiciona um padding para garantir que não ultrapasse as bordas */
+  padding: 0 20px;
 }
 
 /* Coluna do texto */
@@ -47,41 +47,42 @@
   border-radius: 8px;
   backdrop-filter: blur(10px);
   box-sizing: border-box;
-  width: 100%; /* Garantir que ocupe 100% da largura disponível */
-  max-width: 500px; /* Limita o tamanho máximo do formulário */
-  margin: 0 auto; /* Centraliza o formulário */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* Formulário */
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os campos de input */
+  align-items: stretch; /* Alinha os campos na mesma largura */
+  gap: 15px; /* Espaçamento entre os campos */
 }
 
 .contact-form fieldset {
   border: none;
   padding: 0;
+  width: 100%;
 }
 
 /* Container para os nomes lado a lado */
 .name-container {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: space-between;
-  width: 100%; /* Garantir que ocupe toda a largura do formulário */
+  width: 100%;
 }
 
 .name-field {
-  flex-basis: 45%;
+  flex: 1; /* Garante que os campos ocupem 50% cada um */
   margin-bottom: 15px;
 }
 
 /* Campos do formulário */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  max-width: 90%; /* Limita a largura dos inputs */
+  width: 100%; /* Garantir que os campos ocupem toda a largura */
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -89,7 +90,7 @@
   font-size: 16px;
   background: white;
   color: black;
-  box-sizing: border-box; /* Garantir que o padding seja considerado nas dimensões */
+  box-sizing: border-box;
 }
 
 /* Placeholder */
@@ -108,7 +109,7 @@
   cursor: pointer;
   border-radius: 8px;
   transition: 0.3s;
-  max-width: 90%; /* Limita a largura do botão */
+  width: 100%; /* Faz o botão ocupar toda a largura disponível */
 }
 
 .submit-button:hover {
@@ -120,7 +121,6 @@
   .elementor-container {
     flex-direction: column;
     gap: 20px;
-    padding: 0 20px; /* Ajustar o padding para telas pequenas */
   }
 
   .text-column {
@@ -136,17 +136,17 @@
   .contact-form textarea {
     font-size: 14px;
     padding: 10px;
-    max-width: 100%; /* Garante que os inputs ocuparam toda a largura disponível */
+    width: 100%; /* Garante que os inputs ocuparam toda a largura disponível */
   }
 
   .submit-button {
     font-size: 16px;
     padding: 10px;
-    max-width: 100%; /* Garante que o botão ocupe toda a largura */
+    width: 100%; /* Garante que o botão ocupe toda a largura */
   }
 
   .name-container {
-    flex-direction: column;
+    flex-direction: column; /* Coloca os campos de nome em uma coluna em telas pequenas */
   }
 
   .name-field {
