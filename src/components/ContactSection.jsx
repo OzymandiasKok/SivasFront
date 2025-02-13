@@ -23,11 +23,11 @@ const ContactSection = () => {
             <fieldset>
               <div className="name-container">
                 <div className="name-field">
-                  <label htmlFor="first-name">Primeiro Nome</label>
+                  <label htmlFor="first-name">Nome</label>
                   <input type="text" id="first-name" placeholder="Primeiro Nome" />
                 </div>
                 <div className="name-field">
-                  <label htmlFor="last-name">Último Nome</label>
+                  <label htmlFor="last-name">Sobrenome</label>
                   <input type="text" id="last-name" placeholder="Último Nome" />
                 </div>
               </div>
