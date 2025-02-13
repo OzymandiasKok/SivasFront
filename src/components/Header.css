@@ -9,6 +9,7 @@
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: top 0.3s ease-in-out; /* Transição suave */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header-container {
