@@ -36,23 +36,27 @@
   transition: width 0.3s ease, height 0.3s ease; /* Transição suave */
 }
 
-/* Estilos do menu */
 .nav-menu {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 30px; /* Espaçamento entre os itens */
 }
 
 .nav-menu ul {
   display: flex;
   list-style-type: none;
-  gap: 30px; /* Aumenta o espaçamento */
+  margin: 0;
+  padding: 0;
 }
 
 .nav-menu a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
-  transition: color 0.3s ease; /* Transição suave para hover */
+  transition: color 0.3s ease;
+  text-transform: none;  /* Remover transformação de texto */
+  padding: 10px 15px; /* Uniformizar o padding dos links */
+  display: inline-block; /* Garantir que os links se comportem como botões */
 }
 
 .nav-menu a:hover {
@@ -155,11 +159,10 @@
   text-decoration: none;  /* Remover underline */
   padding: 8px 20px;  /* Padding confortável */
   font-size: 16px;  /* Tamanho da fonte */
-  font-weight: bold;  /* Texto em negrito */
   border-radius: 30px;  /* Bordas arredondadas */
   cursor: pointer;  /* Indica que o item é clicável */
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;  /* Transições suaves */
-  text-transform: uppercase;  /* Deixar o texto em maiúsculas */
+  text-transform: none;  /* Remover transformação em maiúsculas */
   display: inline-block;  /* Garantir que o link se comporte como botão */
 }
 
@@ -175,11 +178,5 @@
 
 /* Garantir que o link de login tenha o espaçamento correto entre os outros links */
 .nav-menu .login-button {
-    /* Distância entre o botão de login e os outros links */
-  border: 2px solid transparent;  /* Garantir que não haja borda quando não estiver em foco */
   margin-right: 10px;
-}
-
-.nav-menu .login-button:hover {
-  background-color: #ffffff;  /* Alterar para um tom mais escuro ao passar o mouse */
 }
