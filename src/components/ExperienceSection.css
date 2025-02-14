@@ -166,3 +166,17 @@
     padding: 6px;  /* Ajustar o padding */
   }
 }
+
+.experience-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.experience-list li strong {
+  min-width: 220px; /* Garante que todas as descrições comecem no mesmo ponto */
+  display: inline-block;
+}
+
+.experience-list li span {
+  text-indent: -4px; /* Ajusta pequenos espaçamentos adicionais */
+}
