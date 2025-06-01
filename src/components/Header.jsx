@@ -21,9 +21,9 @@ const Header = () => {
         <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           <nav>
             <ul>
-              <li><a href="https://portalclientesivas.iuppi.com.br/accounts/login">Início</a></li>
+              <li><a href="/">Início</a></li>
               <li><a href="#contactus">Contato</a></li>
-              <li><a href="#login" className="login-button">Entre</a></li> {/* Botão de Login */}
+              <li><a href="https://portalclientesivas.iuppi.com.br/accounts/login" className="login-button">Entre</a></li> {/* Botão de Login */}
             </ul>
           </nav>
         </div>
